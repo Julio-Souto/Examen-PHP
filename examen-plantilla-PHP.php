@@ -16,7 +16,7 @@ abstract class Plantilla{
 
   function __toString():string
   {
-    return "Nombre: ".$this->nombre." ".$this->apellidos."<br>DNI: ".$this->DNI."<br>Fecha ingreso: ".$this->anoIngreso;
+    return "<br><strong>".static::class."</strong><br>"."Nombre: ".$this->nombre." ".$this->apellidos."<br>DNI: ".$this->DNI."<br>Fecha ingreso: ".$this->anoIngreso;
   }
 }
 
@@ -57,7 +57,7 @@ class Fijo extends Plantilla{
   
   function __toString(): string
   {
-    return "<br><strong>".static::class."</strong><br>".parent::__toString()."<br>Salario base: ".BASE." €<br>Antigüedad: ".$this->getAntiguedad()." años<br>Sueldo: ".$this->getSalario()." €";
+    return parent::__toString()."<br>Salario base: ".BASE." €<br>Antigüedad: ".$this->getAntiguedad()." años<br>Sueldo: ".$this->getSalario()." €";
   }
 }
 
@@ -93,7 +93,7 @@ class Eventual extends Plantilla{
 
   function __toString(): string
   {
-    return "<br><strong>".static::class."</strong><br>".parent::__toString()."<br>Salario: ".$this->getSalario()." €<br>Webs realizadas: ".$this->getWebs()."<br>De las cuales multilenguaje: ".$this->getMultilenguaje();
+    return parent::__toString()."<br>Salario: ".$this->getSalario()." €<br>Webs realizadas: ".$this->getWebs()."<br>De las cuales multilenguaje: ".$this->getMultilenguaje();
   }
 }
 

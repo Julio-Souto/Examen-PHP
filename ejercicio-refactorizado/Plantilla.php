@@ -16,6 +16,6 @@ abstract class Plantilla{
 
   function __toString():string
   {
-    return "Nombre: ".$this->nombre." ".$this->apellidos."<br>DNI: ".$this->DNI."<br>Fecha ingreso: ".$this->anoIngreso;
+    return "<br><strong>".static::class."</strong><br>"."Nombre: ".$this->nombre." ".$this->apellidos."<br>DNI: ".$this->DNI."<br>Fecha ingreso: ".$this->anoIngreso;
   }
 }

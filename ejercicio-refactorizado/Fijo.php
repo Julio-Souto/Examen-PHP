@@ -39,6 +39,6 @@ class Fijo extends Plantilla{
   
   function __toString(): string
   {
-    return "<br><strong>".static::class."</strong><br>".parent::__toString()."<br>Salario base: ".BASE." €<br>Antigüedad: ".$this->getAntiguedad()." años<br>Sueldo: ".$this->getSalario()." €";
+    return parent::__toString()."<br>Salario base: ".BASE." €<br>Antigüedad: ".$this->getAntiguedad()." años<br>Sueldo: ".$this->getSalario()." €";
   }
 }

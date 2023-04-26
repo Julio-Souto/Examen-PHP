@@ -34,6 +34,6 @@ class Eventual extends Plantilla{
 
   function __toString(): string
   {
-    return "<br><strong>".static::class."</strong><br>".parent::__toString()."<br>Salario: ".$this->getSalario()." €<br>Webs realizadas: ".$this->getWebs()."<br>De las cuales multilenguaje: ".$this->getMultilenguaje();
+    return parent::__toString()."<br>Salario: ".$this->getSalario()." €<br>Webs realizadas: ".$this->getWebs()."<br>De las cuales multilenguaje: ".$this->getMultilenguaje();
   }
 }
